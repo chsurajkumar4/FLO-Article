@@ -1,0 +1,42 @@
+{% extends "article/home.html" %}
+{% block content %}
+
+<main role="main" class="container mt-10" >
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <h5 class="pb-4 mb-4 font-italic border-bottom">
+        {{post.author_name}}
+      </h5>
+
+      <div class="blog-post">
+        <h2 class="blog-post-title">{{post.headline}}</h2>
+        <p class="blog-post-meta">{{post.pub_date}} </p>
+
+        <h4>{{post.sub_heading}}</h4>
+        
+        <p>{{post.chead1}}</p>
+        
+        
+      </div><!-- /.blog-post -->
+
+
+      
+    </div><!-- /.blog-main -->
+
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="font-italic"><em>RANCHI MALL</></h4>
+        <p class="mb-0">
+Ranchi Mall has been involved with the FLO Blockchain ecosystem since July 2017. FLO is an actively traded cryptocurrency on Poloniex and Bittrex against BTC (Bitcoins). As of 14 March 2018, the FLO Blockchain is ranked at 351 on CoinMarketCap.com with a total market capitalisation of $14.85 million USD. Being an active cryptocurrency permits a live indicator of all the contributions made by every interested entity in the FLO ecosystem. If the entities contribute more, which is visible to the market, the rankings of the FLO Eco-System will improve. Care has to be taken so that FLO does not become a magnet for a pump-and-dump scheme, a prevalent occurrence in cryptocurrencies leading to a roller-coaster for investors. If contributors to FLO can add to the marketing, technical, documentation and support infrastructures for FLO over a sustained period such that the infrastructure becomes better than competing assets then, in relative terms, the valuation of FLO cryptocurrency should improve. Instead of measuring the progress through total valuation or total market capitalisation which can fluctuate a lot, relative ranking in CoinMarketCap.com is a more stable performance indicator. If cryptomarkets are in a temporary boom or bust, all cryptocurrencies should go up and down together. But if a crypto-asset stands out uniquely due to improvements in its blockchain capabilities and infrastructure its relative ranking will rise irrespective of market booms or busts. It is for this reason that it is prudent to select relative ranking as a yardstick for such initiatives.</p>
+      </div>
+
+      
+     
+    </aside><!-- /.blog-sidebar -->
+
+
+  </div><!-- /.row -->
+
+</main>
+
+{% endblock content %}

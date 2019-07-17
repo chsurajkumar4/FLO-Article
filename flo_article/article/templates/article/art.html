@@ -1,0 +1,29 @@
+{% extends "article/home.html" %}
+{% block content %}
+<div class="container mt-3">
+<div class="row my-2">
+{% for item in myposts %}
+
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">{{item.author_name}}</strong>
+          <h3 class="mb-0">{{item.headline}}</h3>
+          <div class="mb-1 text-muted">{{item.pub_date}}</div>
+          <h6 class="card-text mb-auto">{{item.sub_heading}}</h6>
+          <a href="/blogpost/{{item.post_id}}" class="stretched-link">Continue reading</a>
+        </div>
+        <!--<div class="col-auto d-none d-lg-block">
+           <img src="{{ item.thumbnail.url }}" class="bd-placeholder-img" width="180" height="200"  aria-label="Placeholder: Thumbnail"/>  
+        </div>-->
+      </div>
+    </div>
+   
+{% if forloop.counter|divisibleby:2 %}
+<div class="row my-2">
+  </div>
+ {% endif %}
+
+{% endfor %}
+</div>
+{% endblock content %}
